@@ -1,0 +1,28 @@
+{
+  "name": "jobagent-naukri",
+  "version": "1.0.0",
+  "description": "Naukri.com auto-apply agent — fixed persistent session, sub-agent pipeline (scout/matcher/applier/auditor), MySQL dedupe",
+  "main": "src/index.js",
+  "type": "commonjs",
+  "scripts": {
+    "login": "node src/login.js",
+    "check-login": "node src/check-login.js",
+    "check-llm": "node scripts/check-llm.js",
+    "start": "node src/index.js --once",
+    "once": "node src/index.js --once",
+    "dry-run": "node src/index.js --once --dry-run",
+    "schedule": "node src/index.js --schedule",
+    "db:init": "node scripts/db-init.js",
+    "playwright:install": "npx playwright install chromium"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "mysql2": "^3.11.0",
+    "node-cron": "^3.0.3",
+    "playwright": "^1.49.1",
+    "xlsx": "^0.18.5"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

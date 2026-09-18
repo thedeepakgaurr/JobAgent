@@ -1,0 +1,5 @@
+# deps / build
+node_modules
+.playwright-mcp
+.env
+.profile/
